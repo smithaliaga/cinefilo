@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinefilo.Views.CollectPage"
+             xmlns:lang="clr-namespace:cinefilo.Helpers"
+             xmlns:util="clr-namespace:cinefilo.Util"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="{lang:Translate Menu_Drawer_Collect}">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding CollectViewModel}"
+            Style="{StaticResource StyleStackLayoutInterfaz}"
+            Padding="0">
+
+            <StackLayout Padding="5">
+                <Label 
+                    FontSize="18"
+                    Text="{lang:Translate Collect_Title}"
+                    TextColor="{StaticResource ColorType10}"
+                    XAlign="Center"/>
+            </StackLayout>
+
+            <Grid x:Name="MainPageContainer"
+                  HorizontalOptions="FillAndExpand" 
+                  VerticalOptions="FillAndExpand"
+                  AbsoluteLayout.LayoutFlags="All"/>
+
+            <StackLayout Padding="5">
+                <Label 
+                    FontSize="15"
+                    Text="{lang:Translate Collect_Message_Bottom}"
+                    TextColor="{StaticResource ColorType10}"
+                    XAlign="Center"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

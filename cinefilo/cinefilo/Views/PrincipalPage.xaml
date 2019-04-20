@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinefilo.Views.PrincipalPage"
+             xmlns:lang="clr-namespace:cinefilo.Helpers"
+             xmlns:util="clr-namespace:cinefilo.Util"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="{lang:Translate Menu_Drawer_Principal}">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding PrincipalViewModel}"
+            Style="{StaticResource StyleStackLayoutInterfaz}">
+
+            <ListView Grid.Row="0" VerticalOptions="Fill" 
+                    x:Name="lstMoview"
+                    ItemsSource="{Binding ListMovie}"
+                    ItemTapped="lstItemTapped"
+                    HasUnevenRows="True"
+                    SeparatorVisibility="Default"
+                    SeparatorColor="{StaticResource ColorType9}"
+                    BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Tapped="OnTappedViewCell">
+                            <Grid x:Name="Item">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="6*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Padding="5" VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Image Source="{Binding Image}" HeightRequest="100"/>
+                                </StackLayout>
+
+                                <Grid Grid.Column="1" 
+                                          Padding="5"
+                                          RowSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label
+                                        Grid.Row="1"
+                                        VerticalOptions="Center"
+                                        Style="{StaticResource StyleLabelListviewTitle}"
+                                        FontAttributes="Bold"
+                                        Text="{Binding Name}"/>
+                                    <Label
+                                        Grid.Row="2"
+                                        VerticalOptions="Center"
+                                        Style="{StaticResource StyleLabelListviewDescription}"
+                                        Text="{Binding DescriptionResume}"/>
+
+                                </Grid>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

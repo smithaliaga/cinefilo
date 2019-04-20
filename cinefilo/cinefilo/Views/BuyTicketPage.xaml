@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinefilo.Views.BuyTicketPage"
+             xmlns:lang="clr-namespace:cinefilo.Helpers"
+             xmlns:util="clr-namespace:cinefilo.Util"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="{lang:Translate Menu_Drawer_BuyTicket}">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding BuyTicketViewModel}"
+            Style="{StaticResource StyleStackLayoutInterfaz}"
+            Padding="0">
+
+            <ScrollView
+                VerticalOptions="Fill">
+
+                <StackLayout 
+                    VerticalOptions="Center"
+                    Spacing="0">
+
+                    <Grid 
+                        Padding="20,10,20,10"
+                        HeightRequest="70"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Image
+                            Aspect="AspectFit"
+                            Source="logo.png"/>
+                    </Grid>
+
+                    <StackLayout 
+                        BackgroundColor="{StaticResource ColorType12}"
+                        Padding="20">
+
+                        <util:CustomEntry
+                            x:Name="CardNumber"
+                            Keyboard="Numeric"
+                            Placeholder="{lang:Translate BuyTicket_CardNumber}"
+                            MaxLength="19"
+                            ReturnType="Next"
+                            Text="{Binding CardNumber, Mode=TwoWay}"
+                            Style="{StaticResource StyleEntryDefault}"/>
+
+                        <util:CustomEntry
+                            x:Name="CardHolder"
+                            Placeholder="{lang:Translate BuyTicket_CardHolder}"
+                            ReturnType="Next"
+                            Text="{Binding CardHolder, Mode=TwoWay}"
+                            Style="{StaticResource StyleEntryDefault}"/>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                FontSize="15"
+                                HorizontalTextAlignment="Start"
+                                Text="{lang:Translate BuyTicket_CardExpiration}"
+                                TextColor="{StaticResource ColorType15}"/>
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                FontSize="15"
+                                HorizontalTextAlignment="Start"
+                                Text="{lang:Translate BuyTicket_CardCVV}"
+                                TextColor="{StaticResource ColorType15}"/>
+
+                            <util:CustomEntry
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                x:Name="CardMonthExpirationDate"
+                                Placeholder="{lang:Translate BuyTicket_Month_Format}"
+                                ReturnType="Next"
+                                MaxLength="2"
+                                Keyboard="Numeric"
+                                Text="{Binding CardMonthExpirationDate, Mode=TwoWay}"
+                                Style="{StaticResource StyleEntryDefault}"/>
+
+                            <util:CustomEntry
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                x:Name="CardYearExpirationDate"
+                                Placeholder="{lang:Translate BuyTicket_Year_Format}"
+                                ReturnType="Next"
+                                MaxLength="4"
+                                Keyboard="Numeric"
+                                Text="{Binding CardYearExpirationDate, Mode=TwoWay}"
+                                Style="{StaticResource StyleEntryDefault}"/>
+
+                            <util:CustomEntry
+                                Grid.Row="1"
+                                Grid.Column="2"
+                                x:Name="CardPassword"
+                                IsPassword="True"
+                                Placeholder="{lang:Translate BuyTicket_CardCVV}"
+                                ReturnType="Done"
+                                MaxLength="4"
+                                Keyboard="Numeric"
+                                Text="{Binding CardCVV, Mode=TwoWay}"
+                                Style="{StaticResource StyleEntryDefault}"/>
+
+                        </Grid>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        Padding="20">
+
+                        <Button
+                            Command="{Binding ProcessTransactionCommand}"
+                            Text="{lang:Translate Accept}"
+                            Style="{StaticResource StyleButtonLogin}"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

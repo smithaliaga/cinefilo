@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinefilo.Views.TriviaQR"
+             xmlns:lang="clr-namespace:cinefilo.Helpers"
+             xmlns:util="clr-namespace:cinefilo.Util"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="{lang:Translate Menu_Drawer_Trivia}">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding TriviaViewModel}"
+            Style="{StaticResource StyleStackLayoutInterfaz}"
+            Padding="0">
+
+            <StackLayout Padding="20">
+                <Label 
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    Text="Necesita presentar el código QR para obtener un descuento o premio"
+                    TextColor="{StaticResource ColorType15}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            
+            <StackLayout 
+                        Padding="0"
+                        Spacing="0">
+                <Image x:Name="imageQR" Source="{Binding QR}" HeightRequest="300" />
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

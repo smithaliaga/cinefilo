@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinefilo.Views.MenuPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Menu"
+             BackgroundColor="Navy">
+    <ContentPage.Content>
+        <StackLayout 
+            Style="{StaticResource StyleStackLayoutMenuDrawer}">
+            <ListView Margin="0, 5" x:Name="listView" x:FieldModifier="public"
+                Style="{StaticResource StyleListViewMenuDrawer}"
+                ItemsSource="{Binding Menus}"
+                HasUnevenRows="True"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="5, 3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Padding="6"  Grid.Column="0">
+                                    <Image
+                                        Source="{Binding Icon}" />
+                                </StackLayout>
+                                <Label 
+                                    Margin="0, 5"
+                                      Grid.Column="1"
+                                      Style="{StaticResource StyleLabelListviewMenuDrawer}"
+                                      Text="{Binding Title}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

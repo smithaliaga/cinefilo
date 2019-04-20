@@ -1,0 +1,508 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "9150018bd326c2ddbfa0fb01bf16748eb7a44a8c"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "cinefilo/1.0.0": {
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1.1",
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "12.0.1",
+          "Plugin.Fingerprint": "1.4.9",
+          "Plugin.MediaManager.Forms": "0.4.5",
+          "Plugin.Permissions": "3.0.0.12",
+          "Plugin.Share": "7.1.1",
+          "Rg.Plugins.Popup": "1.1.5.188",
+          "Xam.Plugin.Connectivity": "3.2.0",
+          "Xam.Plugin.DeviceInfo": "4.1.1",
+          "Xam.Plugin.Media": "4.0.1.5",
+          "Xam.Plugin.SimpleAppIntro": "1.0.18",
+          "Xamarin.CustomControls.AccordionView": "1.1.6",
+          "Xamarin.Essentials": "1.1.0",
+          "Xamarin.Forms": "3.6.0.293080",
+          "Xamarin.Forms.Contacts": "1.0.5",
+          "Xamarin.Forms.InputKit": "3.0.6.1",
+          "ZXing.Net.Mobile": "2.4.1",
+          "ZXing.Net.Mobile.Forms": "2.4.1"
+        },
+        "runtime": {
+          "cinefilo.dll": {}
+        },
+        "resources": {
+          "es/cinefilo.resources.dll": {
+            "locale": "es"
+          }
+        }
+      },
+      "CardsView/2.0.1": {
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PanCardView.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/2.6.3": {
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Lottie.Forms.dll": {
+            "assemblyVersion": "2.6.3.0",
+            "fileVersion": "2.6.3.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "MvvmLightLibs/5.4.1.1": {
+        "runtime": {
+          "lib/net45/GalaSoft.MvvmLight.Extras.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          },
+          "lib/net45/GalaSoft.MvvmLight.Platform.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          },
+          "lib/net45/GalaSoft.MvvmLight.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          },
+          "lib/net45/System.Windows.Interactivity.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "3.0.40218.0"
+          }
+        }
+      },
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22727"
+          }
+        }
+      },
+      "Plugin.Fingerprint/1.4.9": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Fingerprint.Abstractions.dll": {
+            "assemblyVersion": "1.4.9.0",
+            "fileVersion": "1.4.9.0"
+          },
+          "lib/netstandard1.0/Plugin.Fingerprint.dll": {
+            "assemblyVersion": "1.4.9.0",
+            "fileVersion": "1.4.9.0"
+          }
+        }
+      },
+      "Plugin.MediaManager/0.4.5": {
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.5": {
+        "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Forms.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Plugin.Permissions/3.0.0.12": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Permissions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Plugin.Share/7.1.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Share.Abstractions.dll": {
+            "assemblyVersion": "7.1.1.0",
+            "fileVersion": "7.1.1.0"
+          },
+          "lib/netstandard1.0/Plugin.Share.dll": {
+            "assemblyVersion": "7.1.1.0",
+            "fileVersion": "7.1.1.0"
+          }
+        }
+      },
+      "Rg.Plugins.Popup/1.1.5.188": {
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Rg.Plugins.Popup.dll": {
+            "assemblyVersion": "1.1.5.188",
+            "fileVersion": "1.1.5.188"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Connectivity.Abstractions.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          },
+          "lib/netstandard1.0/Plugin.Connectivity.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "Xam.Plugin.DeviceInfo/4.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.DeviceInfo.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xam.Plugin.Media/4.0.1.5": {
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Media.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xam.Plugin.SimpleAppIntro/1.0.18": {
+        "dependencies": {
+          "CardsView": "2.0.1",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "2.6.3",
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xam.Plugin.SimpleAppIntro.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.CustomControls.AccordionView/1.1.6": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Xamarin.CustomControls.StateButton": "1.1.0",
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Xamarin.CustomControls.AccordionView.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.CustomControls.StateButton/1.1.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Xamarin.CustomControls.StateButton.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.1.0": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/3.6.0.293080": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms.Contacts/1.0.5": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.ContactService.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms.InputKit/3.0.6.1": {
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.InputKit.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ZXing.Net.Mobile/2.4.1": {
+        "runtime": {
+          "lib/netstandard1.0/ZXing.Net.Mobile.Core.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          },
+          "lib/netstandard1.0/ZXingNetMobile.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          },
+          "lib/netstandard1.0/zxing.portable.dll": {
+            "assemblyVersion": "0.16.2.0",
+            "fileVersion": "0.16.2.0"
+          }
+        }
+      },
+      "ZXing.Net.Mobile.Forms/2.4.1": {
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.293080",
+          "ZXing.Net.Mobile": "2.4.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/ZXing.Net.Mobile.Forms.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "cinefilo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CardsView/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-owoJ5C3D/gNTVV+JRX9GFo5THuNnM0IUgumjjrvxeXnHfhO36AY+2UVoUWXCBiS0hYV3BeY6YvNgl+cjFds53A==",
+      "path": "cardsview/2.0.1",
+      "hashPath": "cardsview.2.0.1.nupkg.sha512"
+    },
+    "Com.Airbnb.Xamarin.Forms.Lottie/2.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6fAmAVntQyHCh6sQ/hoi/0MezjERbay8toNeYltFxH9DugZkK+9tlP9gHdO/7BoOALKYCExXFJEOXq+bH1wiEw==",
+      "path": "com.airbnb.xamarin.forms.lottie/2.6.3",
+      "hashPath": "com.airbnb.xamarin.forms.lottie.2.6.3.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "MvvmLightLibs/5.4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xYpVzOYnIz/M6T0pdc3w5t0vrt2ZKspSS+CZjQ+pZE+5yHv9qXSWkncHJXb6D7Egstalso4ivnIUkA1xEClViw==",
+      "path": "mvvmlightlibs/5.4.1.1",
+      "hashPath": "mvvmlightlibs.5.4.1.1.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "path": "newtonsoft.json/12.0.1",
+      "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
+    },
+    "Plugin.Fingerprint/1.4.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J2IzXTorHra6GiQ0E5rQZUmra5ktqPXrgaOvpH47EmejUmEYKYy+g2SbKeJg5sUQ/j6eZl8hPe0tJI65LH0q/A==",
+      "path": "plugin.fingerprint/1.4.9",
+      "hashPath": "plugin.fingerprint.1.4.9.nupkg.sha512"
+    },
+    "Plugin.MediaManager/0.4.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cpTcuGY+HUDhz2spS4jlB8zmlVsULzbR+YYcxXanKnARUmXO7L66gC+MiJYhVfOEhg96EKYPGEGPuIPtzST3+A==",
+      "path": "plugin.mediamanager/0.4.5",
+      "hashPath": "plugin.mediamanager.0.4.5.nupkg.sha512"
+    },
+    "Plugin.MediaManager.Forms/0.4.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-djWih2/cBd8Sypg+TkDJ2eEQYUGtK7amFvPBlmRVeyetAIhMtPsrJkytvSRnVgYml1ArJvN6f33dc5U3U2avuA==",
+      "path": "plugin.mediamanager.forms/0.4.5",
+      "hashPath": "plugin.mediamanager.forms.0.4.5.nupkg.sha512"
+    },
+    "Plugin.Permissions/3.0.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
+      "path": "plugin.permissions/3.0.0.12",
+      "hashPath": "plugin.permissions.3.0.0.12.nupkg.sha512"
+    },
+    "Plugin.Share/7.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-07mFq3H9eeX2TGNKitmByjDKZl/3KXZrT2jv/27mEEnY7me/lHQSX52mI0B1mVTZquCloNmZm12EcV1t4fFSSA==",
+      "path": "plugin.share/7.1.1",
+      "hashPath": "plugin.share.7.1.1.nupkg.sha512"
+    },
+    "Rg.Plugins.Popup/1.1.5.188": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PE7uHJ/LuI5pSO1HpgjJ+v2KhNfftzqt/L1AoGH/5mX0fP7pcW6lG4FbUHuCFKolrzJfLLotuuET+hfN50Whpg==",
+      "path": "rg.plugins.popup/1.1.5.188",
+      "hashPath": "rg.plugins.popup.1.1.5.188.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "Xam.Plugin.Connectivity/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZV45TaBTCJg7XQNEl3fPyyJcuMMhdDEQ6BCLc/5pMuTv38M226ER0WTu5sbmba8jlliDuzeRqkRFHwrGdWAgyg==",
+      "path": "xam.plugin.connectivity/3.2.0",
+      "hashPath": "xam.plugin.connectivity.3.2.0.nupkg.sha512"
+    },
+    "Xam.Plugin.DeviceInfo/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tBoWE60pwlUDK9f+X3CeFBVTpU+OuMel8Hfp7bxYnJKiGGQ2I3S+8ZF1lJSxvlQf0o8C/IjGnddUeDqwBmWZfg==",
+      "path": "xam.plugin.deviceinfo/4.1.1",
+      "hashPath": "xam.plugin.deviceinfo.4.1.1.nupkg.sha512"
+    },
+    "Xam.Plugin.Media/4.0.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a5l/M2Tl06BqBX/uhM/pr+q1jDkh2tRQr5Ne9rjAuD9VYn5STE+7kVFTzIUNPMnMr9PZLJkWP5WAr/tBN5oepw==",
+      "path": "xam.plugin.media/4.0.1.5",
+      "hashPath": "xam.plugin.media.4.0.1.5.nupkg.sha512"
+    },
+    "Xam.Plugin.SimpleAppIntro/1.0.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HH5Q8SK/qd6rHDVx2npRlknSh0pzZj5C3qrI0O7Oq5W+uGhh1wUZBb7Xs2JHdiYM64IT4oJ1GIheyG9FapBJNA==",
+      "path": "xam.plugin.simpleappintro/1.0.18",
+      "hashPath": "xam.plugin.simpleappintro.1.0.18.nupkg.sha512"
+    },
+    "Xamarin.CustomControls.AccordionView/1.1.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m+4aDFEa5pJQgCkogTSgTB5NWBYwEeZ4NX+JWbp0s6jCgHu9kviXuT1B8jFC+Vzaewaf9HKKR+WLnXGiCRAGUQ==",
+      "path": "xamarin.customcontrols.accordionview/1.1.6",
+      "hashPath": "xamarin.customcontrols.accordionview.1.1.6.nupkg.sha512"
+    },
+    "Xamarin.CustomControls.StateButton/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-74gnaCS0ktEY5TygZDnAVYP0bM7BUVMuawO+kiIAs+3mpLb1U32LSUb1lJnzuOYdEqDa/aAuVDQAy7rzXK4nqw==",
+      "path": "xamarin.customcontrols.statebutton/1.1.0",
+      "hashPath": "xamarin.customcontrols.statebutton.1.1.0.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W0XOt1dNMAE2POcsVotoKDDy5FdAOnR0qULKl6WI4kQEMxQ1sp84DsSU5iacV7oQUMuPhUBAm/3ywks0HO1QrQ==",
+      "path": "xamarin.essentials/1.1.0",
+      "hashPath": "xamarin.essentials.1.1.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/3.6.0.293080": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5o6pS3kbFwWDiTpywz0UasLwn9Ay5/1eGH8JWXBV0N2lDkZauOgTZaMIE/Rdjz2bLhMturwzI1/DFuNxdSidFw==",
+      "path": "xamarin.forms/3.6.0.293080",
+      "hashPath": "xamarin.forms.3.6.0.293080.nupkg.sha512"
+    },
+    "Xamarin.Forms.Contacts/1.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b6zcl9qSUfWH/PnZlEXphAYkNPsPsL7fhuf5KdgtiirI5N+Rr2d+90LPP6KPw6OJEEo4/XwLolwGG5kgD0DdZQ==",
+      "path": "xamarin.forms.contacts/1.0.5",
+      "hashPath": "xamarin.forms.contacts.1.0.5.nupkg.sha512"
+    },
+    "Xamarin.Forms.InputKit/3.0.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lgUwqHAFTAWi60qr6DWQRJehabVaFsZ1vIGCuYsNoWbpSy0EUNXB6ujldJvIzzdq6Q43f4vZGnoMLOueCuJolw==",
+      "path": "xamarin.forms.inputkit/3.0.6.1",
+      "hashPath": "xamarin.forms.inputkit.3.0.6.1.nupkg.sha512"
+    },
+    "ZXing.Net.Mobile/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iCL2WcqOyUnC1iFFdzXijk0EXfoLMDqW88MyhoTZigSyhJZM2C5hKgSZVyfx9E35tgkde/IZwHkk8cVDnbQlYg==",
+      "path": "zxing.net.mobile/2.4.1",
+      "hashPath": "zxing.net.mobile.2.4.1.nupkg.sha512"
+    },
+    "ZXing.Net.Mobile.Forms/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7z+MfL8TbfE36s1GGvrnlkhLUOV5dgdn1gYhUb3GU2W6YXzpfF39k6EqkmFsyNm1O07evTaKFgh7UTOqcWub3g==",
+      "path": "zxing.net.mobile.forms/2.4.1",
+      "hashPath": "zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+    }
+  }
+}

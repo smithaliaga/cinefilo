@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:cinefilo.Infrastructure"
+             x:Class="cinefilo.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <infra:InstanceLocator x:Key="Locator" />
+
+            <Color x:Key="ColorType1">#F68F1E</Color>
+            <Color x:Key="ColorType2">#F0B034</Color>
+            <Color x:Key="ColorType3">#EE6363</Color>
+            <Color x:Key="ColorType4">#6CC39C</Color>
+            <Color x:Key="ColorType5">#67C8D1</Color>
+            <Color x:Key="ColorType6">#38414E</Color>
+            <Color x:Key="ColorType7">#EAE9EA</Color>
+            <Color x:Key="ColorType8">#5A5A5A</Color>
+            <Color x:Key="ColorType9">#B6B6B7</Color>
+            <Color x:Key="ColorType10">#485D75</Color>
+            <Color x:Key="ColorType11">#DAE5EC</Color>
+            <Color x:Key="ColorType12">#EEEEEE</Color>
+            <Color x:Key="ColorType13">#89A3AD</Color>
+            <Color x:Key="ColorType14">#5B9EAD</Color>
+            <Color x:Key="ColorType15">#4E4E56</Color>
+            <Color x:Key="ColorType16">#507D90</Color>
+            <Color x:Key="ColorType17">#ffb142</Color>
+
+            <Style x:Key="StyleButtonLogin" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorType2}" />
+            </Style>
+
+            <Style x:Key="StyleDefaultEntry" TargetType="Entry">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="{StaticResource ColorType6}" />
+            </Style>
+
+            <Style x:Key="StyleDefaultLabel" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="{StaticResource ColorType6}" />
+            </Style>
+            
+            <Style x:Key="StyleListViewMenuDrawer" TargetType="ListView">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorType12}" />
+            </Style>
+            
+            <Style x:Key="StyleStackLayoutMenuDrawer" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorType12}" />
+            </Style>
+            
+            <Style x:Key="StyleStackLayoutInterfaz" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+            
+            <Style x:Key="StyleLabelListviewMenuDrawer" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="17" />
+                <Setter Property="TextColor" Value="{StaticResource ColorType10}" />
+            </Style>
+
+            <Style x:Key="StyleLabelListviewTitle" TargetType="Label">
+                <Setter Property="FontSize" Value="17" />
+                <Setter Property="TextColor" Value="{StaticResource ColorType10}" />
+            </Style>
+
+            <Style x:Key="StyleLabelListviewDescription" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="{StaticResource ColorType10}" />
+            </Style>
+
+            <Style x:Key="StyleButtonDefault" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorType5}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+
+            <Style x:Key="StyleEntryDefault" TargetType="Entry">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="TextColor" Value="{StaticResource ColorType6}" />
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Focused">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="{StaticResource ColorType9}" />
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <Style x:Key="StyleEntryHintDefault" TargetType="Entry">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="{StaticResource ColorType6}" />
+                <Setter Property="PlaceholderColor" Value="{StaticResource ColorType9}" />
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Focused">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="{StaticResource ColorType9}" />
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

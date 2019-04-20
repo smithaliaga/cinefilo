@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinefilo.Views.TriviaPage"
+             xmlns:lang="clr-namespace:cinefilo.Helpers"
+             xmlns:util="clr-namespace:cinefilo.Util"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="{lang:Translate Menu_Drawer_Trivia}">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding TriviaViewModel}"
+            Style="{StaticResource StyleStackLayoutInterfaz}"
+            Padding="0"
+            IsEnabled="{Binding IsEnabled,Mode=TwoWay}">
+
+            <StackLayout Padding="20">
+                <Label 
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    Text="Para ganar descuentos o premios responda las siguientes preguntas"
+                    TextColor="{StaticResource ColorType15}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            
+            <StackLayout Padding="20">
+                <Label 
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    Text="{Binding TriviaPregunta.pregunta}"
+                    TextColor="{StaticResource ColorType15}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            
+            
+            <ListView x:Name="lstQuestion"
+                    ItemsSource="{Binding Respuestas, Mode=TwoWay}"
+                    SelectionMode="None"
+                    HasUnevenRows="True"
+                    SeparatorVisibility="Default"
+                    SeparatorColor="{StaticResource ColorType9}"
+                    BackgroundColor="White"
+                    VerticalOptions="Fill">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid 
+                                x:Name="Item"
+                                Padding="20,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="45"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <input:RadioButton Grid.Row="0" IsChecked="{Binding estadoSeleccion, Mode=TwoWay}" >
+                                    <input:RadioButton.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                                    BindingContext="{Binding Source={x:Reference lstQuestion}, Path=BindingContext}"
+                                                    Command="{Binding SelectedRadioButtonTriviaCommand}"
+                                                    CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
+                                    </input:RadioButton.GestureRecognizers>
+                                </input:RadioButton>
+
+                                <Label 
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    FontSize="15"
+                                    Text="{Binding respuesta}"
+                                    VerticalOptions="Center"
+                                    TextColor="{StaticResource ColorType15}"
+                                    XAlign="Center"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Padding="20">
+                <Button 
+                    Text="{lang:Translate Accept}"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding ValidarRespuestaCommand}"
+                    Style="{StaticResource StyleButtonDefault}"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

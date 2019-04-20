@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinefilo.Views.DetailMoviePage"
+             xmlns:lang="clr-namespace:cinefilo.Helpers"
+             xmlns:util="clr-namespace:cinefilo.Util"
+             xmlns:forms="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="{lang:Translate Menu_Drawer_Collect}">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding DetailMovieViewModel}"
+            Style="{StaticResource StyleStackLayoutInterfaz}"
+            Padding="0">
+
+            <forms:VideoView HeightRequest="200">
+                <forms:VideoView.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="Video_Clicked"
+                        NumberOfTapsRequired="1" />
+                </forms:VideoView.GestureRecognizers>
+            </forms:VideoView>
+
+            <StackLayout Padding="20">
+                <Label Text="{Binding Movie.Name,Mode=TwoWay}" Style="{StaticResource StyleLabelListviewTitle}" FontAttributes="Bold"/>
+                <Label Text="{Binding Movie.Description,Mode=TwoWay}" Style="{StaticResource StyleLabelListviewDescription}"/>
+
+                <Button
+                    Command="{Binding BuyTicketCommand}" 
+                    Style="{StaticResource StyleButtonLogin}"
+                    Text="{lang:Translate DetailMoview_BuyTicket}" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

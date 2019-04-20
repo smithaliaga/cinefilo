@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinefilo.Views.LoginPage"
+             xmlns:util="clr-namespace:cinefilo.Util"
+             xmlns:lang="clr-namespace:cinefilo.Helpers"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+
+        <Grid
+            BindingContext="{Binding Login}"
+            BackgroundColor="{StaticResource ColorType5}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ScrollView
+                Grid.Row="0"
+                VerticalOptions="Fill">
+                <StackLayout VerticalOptions="Center" Padding="20">
+                    <StackLayout Padding="0,0,0,20">
+                        <Image 
+                            Aspect="AspectFit"
+                            Source="logo.png">
+                        </Image>
+                    </StackLayout>
+
+                    <util:CustomEntry
+                        x:Name="username"
+                        Image="ic_user"
+                        Placeholder="{lang:Translate Login_User}"
+                        ReturnType="Next"
+                        Style="{StaticResource StyleEntryDefault}"
+                        Text="{Binding User, Mode=TwoWay}">
+                    </util:CustomEntry>
+
+                    <StackLayout>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="Password_Clicked"
+                                NumberOfTapsRequired="1" />
+                        </StackLayout.GestureRecognizers>
+                        <util:CustomEntry
+                            x:Name="password"
+                            Image="ic_security"
+                            IsEnabled="False"
+                            IsPassword="True"
+                            MaxLength="4"
+                            Placeholder="{lang:Translate Login_Password}"
+                            ReturnType="Done"
+                            Style="{StaticResource StyleEntryDefault}"
+                            Text="{Binding Password, Mode=TwoWay}"
+                            VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Padding="0,10,0,0">
+                        <Button
+                            x:Name="btnLogin"
+                            Command="{Binding LoginCommand}" 
+                            Style="{StaticResource StyleButtonLogin}"
+                            Text="{lang:Translate Login_Button_Login}" />
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+
+            <StackLayout
+                Grid.Row="1"
+                Padding="20,0"
+                VerticalOptions="Center">
+                <Label
+                    BackgroundColor="Transparent"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center"
+                    Text="{lang:Translate Login_Footer}"
+                    TextColor="White"/>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

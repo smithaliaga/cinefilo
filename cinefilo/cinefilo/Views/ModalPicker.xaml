@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                xmlns:util="clr-namespace:cinefilo.Util"
+                xmlns:lang="clr-namespace:cinefilo.Helpers"
+                IsAnimating="True"
+                CloseWhenBackgroundIsClicked="True"
+                x:Class="cinefilo.Views.ModalPicker">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <StackLayout Margin="0, 20" Padding="20, 20, 20, 20">
+        <StackLayout.Resources>
+            <Style TargetType="Frame">
+                <Setter Property="CornerRadius" Value="7" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="Margin" Value="0" />
+            </Style>
+        </StackLayout.Resources>
+        <Frame CornerRadius="7" BackgroundColor="White">
+            <StackLayout>
+
+                <StackLayout Orientation="Vertical" VerticalOptions="Start">
+                    <Label
+                        x:Name="LabelTitle"
+                        FontSize="20"
+                        TextColor="{StaticResource ColorType15}"
+                        XAlign="Center"/>
+
+                    <Entry
+                        FontSize="15"
+                        x:Name="EntryFiler"
+                        BackgroundColor="White"
+                        ReturnType="Done"
+                        TextColor="{StaticResource ColorType15}" />
+                </StackLayout>
+
+                <StackLayout VerticalOptions="CenterAndExpand">
+
+                    <ListView VerticalOptions="Fill" x:Name="lst"
+                        ItemTapped="lstItemTapped"
+                        HasUnevenRows="True"
+                        SeparatorVisibility="Default"
+                        SeparatorColor="{StaticResource ColorType9}"
+                        BackgroundColor="White">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid x:Name="Item">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="45" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid
+                                            Grid.Row="0"
+                                            Padding="5">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Grid Grid.Column="0" IsVisible="{Binding EnableIcon}">
+                                                <Image
+                                                    Source="{Binding Icon}"
+                                                    HeightRequest="40"/>
+                                            </Grid>
+
+                                            <Label 
+                                                Grid.Column="1"
+                                                FontSize="15"
+                                                Text="{Binding Name}"
+                                                VerticalOptions="Center"
+                                                TextColor="{StaticResource ColorType15}"/>
+                                        </Grid>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                    <Button
+                        Style="{StaticResource StyleButtonLogin}"
+                        TextColor="#353b48"
+                        FontSize="14"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="goBack"
+                        BackgroundColor="Transparent"
+                        Text="{lang:Translate Cancel}" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>
