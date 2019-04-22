@@ -195,6 +195,9 @@
                     }
                     else
                     {
+                        await Util.ShowMessage(Languages.Alert, "Respuesta incorrecta, intentelo otra vez", Languages.Accept, null);
+                        this.OnLoad();
+                        /*
                         var getRegisterIntentTrivia = await ApiService.WS_RegisterIntentTrivia<RegisterIntentTrivia>
                                 (MainViewModel.GetInstace().Session.Token, codigoTrivia.Value, estadoRespuesta);
                         if (getRegisterIntentTrivia != null)
@@ -209,6 +212,7 @@
                         {
                             return;
                         }
+                        */
                     }
                 }
                 else
