@@ -56,13 +56,14 @@
             CurrentMenuItemViewModel = menuPrincipal;
             this.Menus.Add(menuPrincipal);
             /**/
-
+            /*
             this.Menus.Add(new MenuItemViewModel
             {
                 Icon = "house_outline.png",
                 PageName = Globales.MENU_DRAWER_COLLECT_PAGE,
                 Title = Languages.Menu_Drawer_Collect
             });
+            */
             this.Menus.Add(new MenuItemViewModel
             {
                 Icon = "house_outline.png",
