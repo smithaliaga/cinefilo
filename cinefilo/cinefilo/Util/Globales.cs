@@ -4,8 +4,8 @@
     {
 
         #region HOST_CONNECTION
-        //public static string WS_Url = "http://192.168.0.67:8080/api/";
-        public static string WS_Url = "https://cineperu.herokuapp.com/api/";
+        public static string WS_Url = "http://192.168.1.133:8080/api/";
+        //public static string WS_Url = "https://cineperu.herokuapp.com/api/";
         public static string HOSTNAME_TRUST = "cine.com";
         public static string ENCRYPTION_KEY = "ABCDEFGHIJKLMNOPQRSTUVWXYZ000001";
         public static string Logo_QR = "logo";
@@ -29,6 +29,7 @@
         public static string WS_GetListTrivia = "WS_GetListTrivia";
         public static string WS_RegisterIntentTrivia = "WS_RegisterIntentTrivia";
         public static string WS_GetTriviaUser = "WS_GetTriviaUser";
+        public static string WS_SendTransactionBuyTicket = "WS_SendTransactionBuyTicket";
         public static string WS_SendException = "WS_SendException";
         #endregion
     }

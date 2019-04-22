@@ -11,6 +11,8 @@ using static cinefilo.Models.ws.GetListMovie;
 namespace cinefilo.ViewModels
 {
     using cinefilo.Helpers;
+    using cinefilo.Models;
+    using cinefilo.Services;
     using Util;
 
     public class BuyTicketViewModel : BaseViewModel
@@ -40,9 +42,31 @@ namespace cinefilo.ViewModels
         {
             try
             {
+                if (Movie == null || string.IsNullOrEmpty(CardNumber) || string.IsNullOrEmpty(CardHolder) ||
+                    string.IsNullOrEmpty(CardMonthExpirationDate) || string.IsNullOrEmpty(CardYearExpirationDate) ||
+                    string.IsNullOrEmpty(CardCVV))
+                {
+                    await Util.ShowMessage(Languages.Alert, Languages.Default_Fill_Data, Languages.Accept, null);
+                    return;
+                }
+
                 await ShowDialog();
 
-                
+                var response = await ApiService.WS_SendTransactionBuyTicket<EntityWSBase>(MainViewModel.GetInstace().Session.Token,
+                    Movie.Code, CardNumber, CardHolder, cardMonthExpirationDate + "/" + CardYearExpirationDate, CardCVV);
+                if (response != null)
+                {
+                    if (response.ErrorCode == 0)
+                    {
+                        await Util.ShowMessage(Languages.Alert, Languages.System_Request_Success, Languages.Accept, null);
+                        Util.HideAllModalsDefault();
+                    }
+                }
+                else
+                {
+                    return;
+                }
+
             }
             catch (Exception ex)
             {

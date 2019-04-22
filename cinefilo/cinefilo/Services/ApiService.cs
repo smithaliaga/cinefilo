@@ -177,6 +177,41 @@
             }
         }
 
+        public static async Task<EntityWSBase> WS_SendTransactionBuyTicket<T>(
+            string token, long? codigoPelicula, string numeroTarjeta, string nombreTitular, string fechaExpiracion, string codigoSeguridad)
+        {
+            try
+            {
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "token", token },
+                    { "codigoPelicula", codigoPelicula },
+                    { "numeroTarjeta", numeroTarjeta },
+                    { "nombreTitular", nombreTitular },
+                    { "fechaExpiracion", fechaExpiracion },
+                    { "codigoSeguridad", codigoSeguridad },
+                };
+
+                string jsonData = JsonConvert.SerializeObject(parameters, Formatting.Indented);
+                var response = await SendRequest<Response>(Globales.WS_Url + Globales.WS_SendTransactionBuyTicket, jsonData);
+
+                if (response == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    var model = JsonConvert.DeserializeObject<EntityWSBase>(response.Result);
+                    return model;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
         public static async Task<EntityWSBase> WS_SendException<T>(
             string exception,
             string sessionId)
