@@ -38,14 +38,14 @@
                             Keyboard="Numeric"
                             Placeholder="{lang:Translate BuyTicket_CardNumber}"
                             MaxLength="19"
-                            ReturnType="Next"
+                            ReturnType="Done"
                             Text="{Binding CardNumber, Mode=TwoWay}"
                             Style="{StaticResource StyleEntryDefault}"/>
 
                         <util:CustomEntry
                             x:Name="CardHolder"
                             Placeholder="{lang:Translate BuyTicket_CardHolder}"
-                            ReturnType="Next"
+                            ReturnType="Done"
                             Text="{Binding CardHolder, Mode=TwoWay}"
                             Style="{StaticResource StyleEntryDefault}"/>
 
@@ -83,7 +83,7 @@
                                 Grid.Column="0"
                                 x:Name="CardMonthExpirationDate"
                                 Placeholder="{lang:Translate BuyTicket_Month_Format}"
-                                ReturnType="Next"
+                                ReturnType="Done"
                                 MaxLength="2"
                                 Keyboard="Numeric"
                                 Text="{Binding CardMonthExpirationDate, Mode=TwoWay}"
@@ -94,7 +94,7 @@
                                 Grid.Column="1"
                                 x:Name="CardYearExpirationDate"
                                 Placeholder="{lang:Translate BuyTicket_Year_Format}"
-                                ReturnType="Next"
+                                ReturnType="Done"
                                 MaxLength="4"
                                 Keyboard="Numeric"
                                 Text="{Binding CardYearExpirationDate, Mode=TwoWay}"

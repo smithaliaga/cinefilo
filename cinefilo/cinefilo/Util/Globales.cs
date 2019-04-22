@@ -4,8 +4,8 @@
     {
 
         #region HOST_CONNECTION
-        public static string WS_Url = "http://192.168.1.133:8080/api/";
-        //public static string WS_Url = "https://cineperu.herokuapp.com/api/";
+        //public static string WS_Url = "http://192.168.1.133:8080/api/";
+        public static string WS_Url = "https://cineperu.herokuapp.com/api/";
         public static string HOSTNAME_TRUST = "cine.com";
         public static string ENCRYPTION_KEY = "ABCDEFGHIJKLMNOPQRSTUVWXYZ000001";
         public static string Logo_QR = "logo";
